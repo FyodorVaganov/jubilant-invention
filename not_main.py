@@ -56,6 +56,9 @@ while game:
         ball.rect.x += speed_x
         ball.rect.y += speed_y
 
+        if sprite.collide_rect(racket1, ball) or sprite.collide_rect(racket2, ball):
+           speed_x *= -1
+
         if ball.rect.y > win_height-50 or ball.rect.y < 0:
            speed_y *= -1
 
